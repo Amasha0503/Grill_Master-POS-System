@@ -1,7 +1,23 @@
 .header{
     font-size: larger;
-    
+  
 }
 .brand-name{
-    font-size: xx-large;
+    font-style:italic;
+    
+    font-family:fantasy ;
+    color: rgb(143, 249, 107);
+}
+.main-body{
+    background-image: url("../images/360_F_1659340269_JpPZIAOZyaApK7OUb2orHRQb4DkIWafG.jpg");
+    background-size: cover;   
+    background-attachment: fixed;    
+    background-position: center;  
+    background-repeat: no-repeat; 
+}
+.nav_tabs a{
+    color: #ffffff;
+}
+.sub-body{
+    justify-content: flex-end;
 }
