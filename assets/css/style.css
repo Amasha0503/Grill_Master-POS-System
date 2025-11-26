@@ -21,3 +21,33 @@
 .sub-body{
     justify-content: flex-end;
 }
+.h-food{
+
+    text-align: center;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
+    color: rgb(5, 80, 13);
+    
+}
+.h-menu{
+   
+    font-family:fantasy ;
+    color: rgb(129, 10, 10);
+    font-size: 70px;
+}
+.menu-body{
+    background-color: rgba(215, 126, 11, 0.871);
+}
+.btn-menu {
+    background-color: #ca620d;
+    border-color: #ff6b35;
+    color: #ffffff;
+    padding: 10px 35px;
+    font-size: large;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.btn-menu:hover {
+    background-color: #e55a28;
+    border-color: #e55a28;
+}

@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body class="main-body">
+<body class="menu-body">
 
     <div class="container header">
         <header class="d-flex flex-wrap justify-content-center px-0 py-3 mb-4 border-bottom "> <a href="/"
@@ -21,6 +21,7 @@
             <ul class="nav nav-pills nav_tabs">
                 <li class="nav-item"><a href="index.html" class="nav-link ">Home</a></li>
                 <li class="nav-item"><a href="menu.html" class="nav-link active" aria-current="page">Menu</a></li>
+                <li class="nav-item"><a href="index.html" class="nav-link ">Cart</a></li>
                 <li class="nav-item"><a href="#" class="nav-link">About</a></li>
             </ul>
         </header>
@@ -28,122 +29,120 @@
 
 
     <main>
-        <section class="py-5 text-center container">
+        <section class="py-2 text-center container">
             <div class="row py-lg-5">
                 <div class="col-lg-6 col-md-8 mx-auto">
-                    <h1 class="fw-light">Album example</h1>
-                    <p> <a href="#burgers" class="btn btn-primary my-2">Burgers</a> 
-                         <a href="#fries" class="btn btn-primary my-2">Fries</a> 
-                         <a href="#drinks" class="btn btn-primary my-2">Drinks</a> 
+                    <h1 class="fw-bold py-3 h-menu">Our Menu</h1>
+                    <p> <a href="#burgers" class="btn btn-menu">Burgers</a> 
+                         <a href="#fries" class="btn btn-menu">Snacks & Bites</a> 
+                         <a href="#drinks" class="btn btn-menu">Beverages</a> 
                     </p>
                 </div>
             </div>
         </section>
 
-        <div class="album py-5 " id="burgers">
+        <h1 class="h-food" id="burgers">Burgers</h1>
+        <div class="album py-5 " >
             <div class="container">
                 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
                     <div class="col">
-                        <div class="card shadow-sm"> <svg aria-label="Placeholder: Thumbnail"
+                        <div class="card shadow-sm"> 
+                            <img aria-label="Placeholder: Thumbnail"
                                 class="bd-placeholder-img card-img-top" height="225"
                                 preserveAspectRatio="xMidYMid slice" role="img" width="100%"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <title>Placeholder</title>
-                                <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%"
-                                    fill="#eceeef" dy=".3em">Thumbnail</text>
-                            </svg>
-                            <div class="card-body">
-                                <p class="card-text">This is a wider card with supporting text below as a natural
-                                    lead-in to additional content. This content is a little bit longer.</p>
+                                src="assets/images/cheeseburger.png">
+                            <div class="card-body">  
+                                <p class="card-text"><h5>Cheeseburger</h5>juicy ground beef patty topped with 4 different melted cheese</p>
                                 <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group"> <button type="button"
-                                            class="btn btn-sm btn-outline-secondary">View</button> <button type="button"
-                                            class="btn btn-sm btn-outline-secondary">Edit</button> </div> <small
-                                        class="text-body-secondary">9 mins</small>
+                                    <div class="btn-group"> 
+                                        <button type="button" class="btn btn-sm btn-secondary" disabled aria-disabled="true" tabindex="-1">Rs.1850.00</button><button type="button"
+                                            class="btn btn-sm btn-outline-secondary">+add to cart</button> 
+                                    </div> 
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col">
-                        <div class="card shadow-sm"> <svg aria-label="Placeholder: Thumbnail"
+                        <div class="card shadow-sm"> 
+                            <img aria-label="Placeholder: Thumbnail"
                                 class="bd-placeholder-img card-img-top" height="225"
                                 preserveAspectRatio="xMidYMid slice" role="img" width="100%"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <title>Placeholder</title>
-                                <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%"
-                                    fill="#eceeef" dy=".3em">Thumbnail</text>
-                            </svg>
+                                src="assets/images/chickenburger.png">
                             <div class="card-body">
-                                <p class="card-text">This is a wider card with supporting text below as a natural
-                                    lead-in to additional content. This content is a little bit longer.</p>
+                                <p class="card-text"><h5>Chicken Burger</h5>grilled chicken patty with lettuce, tomato, cheese and mayo</p>
                                 <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group"> <button type="button"
-                                            class="btn btn-sm btn-outline-secondary">View</button> <button type="button"
-                                            class="btn btn-sm btn-outline-secondary">Edit</button> </div> <small
-                                        class="text-body-secondary">9 mins</small>
+                                    <div class="btn-group"> 
+                                        <button type="button" class="btn btn-sm btn-secondary" disabled aria-disabled="true" tabindex="-1">Rs.1950.00</button><button type="button"
+                                            class="btn btn-sm btn-outline-secondary">+add to cart</button>
+                                    </div> 
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col">
-                        <div class="card shadow-sm"> <svg aria-label="Placeholder: Thumbnail"
+                        <div class="card shadow-sm"> 
+                            <img aria-label="Placeholder: Thumbnail"
                                 class="bd-placeholder-img card-img-top" height="225"
                                 preserveAspectRatio="xMidYMid slice" role="img" width="100%"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <title>Placeholder</title>
-                                <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%"
-                                    fill="#eceeef" dy=".3em">Thumbnail</text>
-                            </svg>
+                                src="assets/images/smashburger.png">   
                             <div class="card-body">
-                                <p class="card-text">This is a wider card with supporting text below as a natural
-                                    lead-in to additional content. This content is a little bit longer.</p>
+                                <p class="card-text"><h5>Smash Burger</h5>crispy, caramelized ground beef griddle with melted cheese, onions, and lettuce</p>
                                 <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group"> <button type="button"
-                                            class="btn btn-sm btn-outline-secondary">View</button> <button type="button"
-                                            class="btn btn-sm btn-outline-secondary">Edit</button> </div> <small
-                                        class="text-body-secondary">9 mins</small>
+                                    <div class="btn-group"> 
+                                        <button type="button" class="btn btn-sm btn-secondary" disabled aria-disabled="true" tabindex="-1">Rs.2250.00</button><button type="button"
+                                            class="btn btn-sm btn-outline-secondary">+add to cart</button> 
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col">
-                        <div class="card shadow-sm"> <svg aria-label="Placeholder: Thumbnail"
+                        <div class="card shadow-sm"> 
+                            <img aria-label="Placeholder: Thumbnail"
                                 class="bd-placeholder-img card-img-top" height="225"
                                 preserveAspectRatio="xMidYMid slice" role="img" width="100%"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <title>Placeholder</title>
-                                <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%"
-                                    fill="#eceeef" dy=".3em">Thumbnail</text>
-                            </svg>
+                                src="assets/images/turkeyburger.png">
                             <div class="card-body">
-                                <p class="card-text">This is a wider card with supporting text below as a natural
-                                    lead-in to additional content. This content is a little bit longer.</p>
+                                <p class="card-text"><h5>Turkey Burger</h5>seasoned and grilled ground turkey patty with lettuce, tomato and avacado</p>
                                 <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group"> <button type="button"
-                                            class="btn btn-sm btn-outline-secondary">View</button> <button type="button"
-                                            class="btn btn-sm btn-outline-secondary">Edit</button> </div> <small
-                                        class="text-body-secondary">9 mins</small>
+                                    <div class="btn-group"> 
+                                        <button type="button" class="btn btn-sm btn-secondary" disabled aria-disabled="true" tabindex="-1">Rs.1650.00</button>
+                                        <button type="button"class="btn btn-sm btn-outline-secondary">+add to cart</button> 
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col">
-                        <div class="card shadow-sm"> <svg aria-label="Placeholder: Thumbnail"
+                        <div class="card shadow-sm"> 
+                            <img aria-label="Placeholder: Thumbnail"
                                 class="bd-placeholder-img card-img-top" height="225"
                                 preserveAspectRatio="xMidYMid slice" role="img" width="100%"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <title>Placeholder</title>
-                                <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%"
-                                    fill="#eceeef" dy=".3em">Thumbnail</text>
-                            </svg>
+                                src="assets/images/meatburger.png">
                             <div class="card-body">
-                                <p class="card-text">This is a wider card with supporting text below as a natural
-                                    lead-in to additional content. This content is a little bit longer.</p>
+                                <p class="card-text"><h5>Meat Burger</h5>grilled all-meat(beef, chicken, lamb, pork) patty with bacon, cheddar, tomato, lettuce and barbecue sauce </p>
                                 <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group"> <button type="button"
-                                            class="btn btn-sm btn-outline-secondary">View</button> <button type="button"
-                                            class="btn btn-sm btn-outline-secondary">Edit</button> </div> <small
-                                        class="text-body-secondary">9 mins</small>
+                                    <div class="btn-group"> 
+                                        <button type="button" class="btn btn-sm btn-secondary" disabled aria-disabled="true" tabindex="-1">Rs.2450.00</button>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">+add to cart</button> 
+                                    </div> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm"> 
+                            <img aria-label="Placeholder: Thumbnail"
+                                class="bd-placeholder-img card-img-top" height="225"
+                                preserveAspectRatio="xMidYMid slice" role="img" width="100%"
+                                src="assets/images/mushroomburger.png">
+                            <div class="card-body">
+                                <p class="card-text"><h5>Mushroom Burger</h5>portobello mushroom with melted cheese, garlic aioli, and sautéed onions</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group"> 
+                                        <button type="button" class="btn btn-sm btn-secondary" disabled aria-disabled="true" tabindex="-1">Rs.1550.00</button>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">+add to cart</button> 
+                                    </div> 
                                 </div>
                             </div>
                         </div>
@@ -152,222 +151,188 @@
             </div>
         </div>
 
-        <div class="album py-5 " id="fries">
+
+
+        <h2 class="h-food" id="fries">Snacks & Bites</h2>
+        <div class="album py-5 " >
             <div class="container">
                 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
                     <div class="col">
-                        <div class="card shadow-sm"> <svg aria-label="Placeholder: Thumbnail"
+                        <div class="card shadow-sm"> 
+                            <img aria-label="Placeholder: Thumbnail"
                                 class="bd-placeholder-img card-img-top" height="225"
                                 preserveAspectRatio="xMidYMid slice" role="img" width="100%"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <title>Placeholder</title>
-                                <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%"
-                                    fill="#eceeef" dy=".3em">Thumbnail</text>
-                            </svg>
-                            <div class="card-body">
-                                <p class="card-text">This is a wider card with supporting text below as a natural
-                                    lead-in to additional content. This content is a little bit longer.</p>
+                                src="assets/images/chickennuggets.jpg">
+                            <div class="card-body">  
+                                <p class="card-text"><h5>Chicken Nuggets (4 pieces)</h5></p>
                                 <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group"> <button type="button"
-                                            class="btn btn-sm btn-outline-secondary">View</button> <button type="button"
-                                            class="btn btn-sm btn-outline-secondary">Edit</button> </div> <small
-                                        class="text-body-secondary">9 mins</small>
+                                    <div class="btn-group"> 
+                                        <button type="button" class="btn btn-sm btn-secondary" disabled aria-disabled="true" tabindex="-1">Rs.1300.00</button><button type="button"
+                                            class="btn btn-sm btn-outline-secondary">+add to cart</button> 
+                                    </div> 
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col">
-                        <div class="card shadow-sm"> <svg aria-label="Placeholder: Thumbnail"
+                        <div class="card shadow-sm"> 
+                            <img aria-label="Placeholder: Thumbnail"
                                 class="bd-placeholder-img card-img-top" height="225"
                                 preserveAspectRatio="xMidYMid slice" role="img" width="100%"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <title>Placeholder</title>
-                                <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%"
-                                    fill="#eceeef" dy=".3em">Thumbnail</text>
-                            </svg>
+                                src="assets/images/frenchfries.png">
                             <div class="card-body">
-                                <p class="card-text">This is a wider card with supporting text below as a natural
-                                    lead-in to additional content. This content is a little bit longer.</p>
+                                <p class="card-text"><h5>French Fries</h5></p>
                                 <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group"> <button type="button"
-                                            class="btn btn-sm btn-outline-secondary">View</button> <button type="button"
-                                            class="btn btn-sm btn-outline-secondary">Edit</button> </div> <small
-                                        class="text-body-secondary">9 mins</small>
+                                    <div class="btn-group"> 
+                                        <button type="button" class="btn btn-sm btn-secondary" disabled aria-disabled="true" tabindex="-1">Rs.950.00</button><button type="button"
+                                            class="btn btn-sm btn-outline-secondary">+add to cart</button>
+                                    </div> 
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col">
-                        <div class="card shadow-sm"> <svg aria-label="Placeholder: Thumbnail"
+                        <div class="card shadow-sm"> 
+                            <img aria-label="Placeholder: Thumbnail"
                                 class="bd-placeholder-img card-img-top" height="225"
                                 preserveAspectRatio="xMidYMid slice" role="img" width="100%"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <title>Placeholder</title>
-                                <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%"
-                                    fill="#eceeef" dy=".3em">Thumbnail</text>
-                            </svg>
+                                src="assets/images/loadedfries.jpg">   
                             <div class="card-body">
-                                <p class="card-text">This is a wider card with supporting text below as a natural
-                                    lead-in to additional content. This content is a little bit longer.</p>
+                                <p class="card-text"><h5>Chilli Cheese Loaded Fries</h5></p>
                                 <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group"> <button type="button"
-                                            class="btn btn-sm btn-outline-secondary">View</button> <button type="button"
-                                            class="btn btn-sm btn-outline-secondary">Edit</button> </div> <small
-                                        class="text-body-secondary">9 mins</small>
+                                    <div class="btn-group"> 
+                                        <button type="button" class="btn btn-sm btn-secondary" disabled aria-disabled="true" tabindex="-1">Rs.1450.00</button><button type="button"
+                                            class="btn btn-sm btn-outline-secondary">+add to cart</button> 
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col">
-                        <div class="card shadow-sm"> <svg aria-label="Placeholder: Thumbnail"
+                        <div class="card shadow-sm"> 
+                            <img aria-label="Placeholder: Thumbnail"
                                 class="bd-placeholder-img card-img-top" height="225"
                                 preserveAspectRatio="xMidYMid slice" role="img" width="100%"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <title>Placeholder</title>
-                                <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%"
-                                    fill="#eceeef" dy=".3em">Thumbnail</text>
-                            </svg>
+                                src="assets/images/onionrings.jpg">
                             <div class="card-body">
-                                <p class="card-text">This is a wider card with supporting text below as a natural
-                                    lead-in to additional content. This content is a little bit longer.</p>
+                                <p class="card-text"><h5>Crispy Onion Rings</h5></p>
                                 <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group"> <button type="button"
-                                            class="btn btn-sm btn-outline-secondary">View</button> <button type="button"
-                                            class="btn btn-sm btn-outline-secondary">Edit</button> </div> <small
-                                        class="text-body-secondary">9 mins</small>
+                                    <div class="btn-group"> 
+                                        <button type="button" class="btn btn-sm btn-secondary" disabled aria-disabled="true" tabindex="-1">Rs.850.00</button>
+                                        <button type="button"class="btn btn-sm btn-outline-secondary">+add to cart</button> 
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col">
-                        <div class="card shadow-sm"> <svg aria-label="Placeholder: Thumbnail"
-                                class="bd-placeholder-img card-img-top" height="225"
-                                preserveAspectRatio="xMidYMid slice" role="img" width="100%"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <title>Placeholder</title>
-                                <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%"
-                                    fill="#eceeef" dy=".3em">Thumbnail</text>
-                            </svg>
-                            <div class="card-body">
-                                <p class="card-text">This is a wider card with supporting text below as a natural
-                                    lead-in to additional content. This content is a little bit longer.</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group"> <button type="button"
-                                            class="btn btn-sm btn-outline-secondary">View</button> <button type="button"
-                                            class="btn btn-sm btn-outline-secondary">Edit</button> </div> <small
-                                        class="text-body-secondary">9 mins</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
         </div>
 
-        <div class="album py-5 " id="drinks">
+
+        <h2 class="h-food" id="drinks">Beverages</h2>
+        <div class="album py-5 " >
             <div class="container">
                 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
                     <div class="col">
-                        <div class="card shadow-sm"> <svg aria-label="Placeholder: Thumbnail"
+                        <div class="card shadow-sm"> 
+                            <img aria-label="Placeholder: Thumbnail"
                                 class="bd-placeholder-img card-img-top" height="225"
                                 preserveAspectRatio="xMidYMid slice" role="img" width="100%"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <title>Placeholder</title>
-                                <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%"
-                                    fill="#eceeef" dy=".3em">Thumbnail</text>
-                            </svg>
-                            <div class="card-body">
-                                <p class="card-text">This is a wider card with supporting text below as a natural
-                                    lead-in to additional content. This content is a little bit longer.</p>
+                                src="assets/images/coke3.jpg">
+                            <div class="card-body">  
+                                <p class="card-text"><h5>Coke (500 ml)</h5></p>
                                 <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group"> <button type="button"
-                                            class="btn btn-sm btn-outline-secondary">View</button> <button type="button"
-                                            class="btn btn-sm btn-outline-secondary">Edit</button> </div> <small
-                                        class="text-body-secondary">9 mins</small>
+                                    <div class="btn-group"> 
+                                        <button type="button" class="btn btn-sm btn-secondary" disabled aria-disabled="true" tabindex="-1">Rs.400.00</button><button type="button"
+                                            class="btn btn-sm btn-outline-secondary">+add to cart</button> 
+                                    </div> 
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col">
-                        <div class="card shadow-sm"> <svg aria-label="Placeholder: Thumbnail"
+                        <div class="card shadow-sm"> 
+                            <img aria-label="Placeholder: Thumbnail"
                                 class="bd-placeholder-img card-img-top" height="225"
                                 preserveAspectRatio="xMidYMid slice" role="img" width="100%"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <title>Placeholder</title>
-                                <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%"
-                                    fill="#eceeef" dy=".3em">Thumbnail</text>
-                            </svg>
+                                src="assets/images/pepsi.jpg">
                             <div class="card-body">
-                                <p class="card-text">This is a wider card with supporting text below as a natural
-                                    lead-in to additional content. This content is a little bit longer.</p>
+                                <p class="card-text"><h5>Pepsi (500 ml)</h5></p>
                                 <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group"> <button type="button"
-                                            class="btn btn-sm btn-outline-secondary">View</button> <button type="button"
-                                            class="btn btn-sm btn-outline-secondary">Edit</button> </div> <small
-                                        class="text-body-secondary">9 mins</small>
+                                    <div class="btn-group"> 
+                                        <button type="button" class="btn btn-sm btn-secondary" disabled aria-disabled="true" tabindex="-1">Rs.400.00</button><button type="button"
+                                            class="btn btn-sm btn-outline-secondary">+add to cart</button>
+                                    </div> 
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col">
-                        <div class="card shadow-sm"> <svg aria-label="Placeholder: Thumbnail"
+                        <div class="card shadow-sm"> 
+                            <img aria-label="Placeholder: Thumbnail"
                                 class="bd-placeholder-img card-img-top" height="225"
                                 preserveAspectRatio="xMidYMid slice" role="img" width="100%"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <title>Placeholder</title>
-                                <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%"
-                                    fill="#eceeef" dy=".3em">Thumbnail</text>
-                            </svg>
+                                src="assets/images/sprite1.jpg">   
                             <div class="card-body">
-                                <p class="card-text">This is a wider card with supporting text below as a natural
-                                    lead-in to additional content. This content is a little bit longer.</p>
+                                <p class="card-text"><h5>Sprite (500 ml)</h5></p>
                                 <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group"> <button type="button"
-                                            class="btn btn-sm btn-outline-secondary">View</button> <button type="button"
-                                            class="btn btn-sm btn-outline-secondary">Edit</button> </div> <small
-                                        class="text-body-secondary">9 mins</small>
+                                    <div class="btn-group"> 
+                                        <button type="button" class="btn btn-sm btn-secondary" disabled aria-disabled="true" tabindex="-1">Rs.400.00</button><button type="button"
+                                            class="btn btn-sm btn-outline-secondary">+add to cart</button> 
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col">
-                        <div class="card shadow-sm"> <svg aria-label="Placeholder: Thumbnail"
+                        <div class="card shadow-sm"> 
+                            <img aria-label="Placeholder: Thumbnail"
                                 class="bd-placeholder-img card-img-top" height="225"
                                 preserveAspectRatio="xMidYMid slice" role="img" width="100%"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <title>Placeholder</title>
-                                <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%"
-                                    fill="#eceeef" dy=".3em">Thumbnail</text>
-                            </svg>
+                                src="assets/images/lemonmojito.jpg">
                             <div class="card-body">
-                                <p class="card-text">This is a wider card with supporting text below as a natural
-                                    lead-in to additional content. This content is a little bit longer.</p>
+                                <p class="card-text"><h5>Lemon Mojito</h5></p>
                                 <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group"> <button type="button"
-                                            class="btn btn-sm btn-outline-secondary">View</button> <button type="button"
-                                            class="btn btn-sm btn-outline-secondary">Edit</button> </div> <small
-                                        class="text-body-secondary">9 mins</small>
+                                    <div class="btn-group"> 
+                                        <button type="button" class="btn btn-sm btn-secondary" disabled aria-disabled="true" tabindex="-1">Rs.850.00</button>
+                                        <button type="button"class="btn btn-sm btn-outline-secondary">+add to cart</button> 
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col">
-                        <div class="card shadow-sm"> <svg aria-label="Placeholder: Thumbnail"
+                     <div class="col">
+                        <div class="card shadow-sm"> 
+                            <img aria-label="Placeholder: Thumbnail"
                                 class="bd-placeholder-img card-img-top" height="225"
                                 preserveAspectRatio="xMidYMid slice" role="img" width="100%"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <title>Placeholder</title>
-                                <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%"
-                                    fill="#eceeef" dy=".3em">Thumbnail</text>
-                            </svg>
+                                src="assets/images/strwberrymojito.avif">
                             <div class="card-body">
-                                <p class="card-text">This is a wider card with supporting text below as a natural
-                                    lead-in to additional content. This content is a little bit longer.</p>
+                                <p class="card-text"><h5>Strawberry Mojito</h5></p>
                                 <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group"> <button type="button"
-                                            class="btn btn-sm btn-outline-secondary">View</button> <button type="button"
-                                            class="btn btn-sm btn-outline-secondary">Edit</button> </div> <small
-                                        class="text-body-secondary">9 mins</small>
+                                    <div class="btn-group"> 
+                                        <button type="button" class="btn btn-sm btn-secondary" disabled aria-disabled="true" tabindex="-1">Rs.950.00</button>
+                                        <button type="button"class="btn btn-sm btn-outline-secondary">+add to cart</button> 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="col">
+                        <div class="card shadow-sm"> 
+                            <img aria-label="Placeholder: Thumbnail"
+                                class="bd-placeholder-img card-img-top" height="225"
+                                preserveAspectRatio="xMidYMid slice" role="img" width="100%"
+                                src="assets/images/orangemojito.avif">
+                            <div class="card-body">
+                                <p class="card-text"><h5>Orange Mojito</h5></p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group"> 
+                                        <button type="button" class="btn btn-sm btn-secondary" disabled aria-disabled="true" tabindex="-1">Rs.950.00</button>
+                                        <button type="button"class="btn btn-sm btn-outline-secondary">+add to cart</button> 
+                                    </div>
                                 </div>
                             </div>
                         </div>
