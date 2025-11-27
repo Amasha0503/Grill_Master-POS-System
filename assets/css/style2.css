@@ -1,0 +1,97 @@
+/* minimal custom CSS — rely on Bootstrap for layout */
+:root {
+  --brand: #f67318;
+  --brand-dark: #e55d12;
+}
+
+body {
+  background: linear-gradient(90deg, #fff7f0 0%, #fff3e8 50%, #fff8f2 100%);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+}
+
+.login-card{
+    max-width:420px;
+    width:100%;
+}
+
+.logo img{
+    width:20%;
+    height:20%;
+}
+
+/* brand title */
+.brand-title {
+  color: var(--brand);
+  font-size: 1.75rem;
+}
+
+/* primary login CTA */
+.btn-login {
+  background: linear-gradient(180deg, var(--brand) 0%, var(--brand-dark) 100%);
+  border: none;
+  color: #fff;
+  font-weight: 700;
+  box-shadow: 0 12px 26px rgba(230,90,20,0.16);
+}
+
+/* active role button style */
+.btn-outline-secondary.active,
+.btn-outline-secondary:active,
+.btn-check:checked + .btn-outline-secondary {
+  background-color: var(--brand);
+  border-color: var(--brand);
+  color: #fff;
+  box-shadow: 0 8px 18px rgba(246,115,24,0.14);
+}
+/* ...existing code... */
+
+/* Filter buttons */
+.btn-filter {
+    background-color: #f3f3f3;
+    color: #333;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.btn-filter.active {
+    background-color: #f67318;
+    color: white;
+}
+
+.btn-filter:hover {
+    background-color: #f67318;
+    color: white;
+}
+
+/* Card hover effect */
+.card {
+    border-radius: 12px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 20px rgba(246, 115, 24, 0.12) !important;
+}
+.card-detail span {
+    color: #f67318; 
+    font-size: 1.1rem;
+}
+.card-detail button {
+    background: #f67318;
+    color: white;
+    border: none; 
+    width: 36px; 
+    height: 36px;
+}
+.cart{
+    top: 20px;
+}
+.checkout-btn{
+    background: #f67318; 
+    color: white; 
+    border: none; 
+    font-weight: 600;
+}
+
+/* ...existing code... */

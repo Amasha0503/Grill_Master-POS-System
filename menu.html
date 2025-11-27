@@ -7,341 +7,290 @@
     <title>Grill Master</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style2.css">
 </head>
 
-<body class="menu-body">
+<body>
 
-    <div class="container header">
-        <header class="d-flex flex-wrap justify-content-center px-0 py-3 mb-4 border-bottom "> <a href="/"
-                class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-                <img class="bi me-2" src="assets/images/hamburger_3075977.png" alt="logo" width="40" height="32"
-                    aria-hidden="true">
-                <span class="fs-2 brand-name">Grill Master</span> </a>
-            <ul class="nav nav-pills nav_tabs">
-                <li class="nav-item"><a href="index.html" class="nav-link ">Home</a></li>
-                <li class="nav-item"><a href="menu.html" class="nav-link active" aria-current="page">Menu</a></li>
-                <li class="nav-item"><a href="index.html" class="nav-link ">Cart</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">About</a></li>
-            </ul>
-        </header>
+    <!-- Header -->
+    <nav class="navbar bg-white border-bottom">
+        <div class="container-fluid px-4">
+            <div class="d-flex align-items-center gap-2">
+                <img src="assets/images/hamburger_3075977.png" alt="logo" width="40" height="40">
+                <h5 class="mb-0"><span class="text-danger">Cashier</span> - John</h5>
+            </div>
+            <a href="index.html" class="btn btn-danger btn-sm rounded-pill px-4">Logout [-></a>
+        </div>
+    </nav>
+
+    <div class="container-fluid p-4">
+        <div class="row g-4">
+            <!-- Left: Menu Items (8 cols) -->
+            <div class="col-lg-8">
+                <!-- Category Filter -->
+                <div class="d-flex gap-2 mb-4 flex-wrap">
+                    <button class="btn btn-filter btn-sm rounded-pill px-5 active" data-filter="all">All</button>
+                    <a href="#burgers"><button class="btn btn-filter btn-sm rounded-pill px-5" data-filter="burger">Burger</button></a>
+                    <a href="#sides"><button class="btn btn-filter btn-sm rounded-pill px-5" data-filter="side">Side</button></a>
+                    <a href="#drinks"><button class="btn btn-filter btn-sm rounded-pill px-5" data-filter="drink">Drink</button></a>
+                </div>
+
+                <!-- Menu Grid -->
+                <div class="row row-cols-1 row-cols-sm-2 g-3">
+                    
+                    <!-- BURGERS SECTION -->
+                    <div class="col burger-item" id="burgers">
+                        <div class="card border-0 shadow-sm h-100">
+                            <img src="assets/images/cheeseburger.png" class="card-img-top bg-warning rounded-top">
+                            <div class="card-body">
+                                <h6 class="card-title fw-bold text-dark">Cheeseburger</h6>
+                                <p class="card-text text-body-secondary small mb-3">juicy ground beef patty topped with 4 different melted cheese</p>
+                                <div class="d-flex justify-content-between align-items-center card-detail">
+                                    <span class="fw-bold">Rs.1850.00</span>
+                                    <button class="btn btn-sm btn-add-cart rounded-circle" data-name="Cheeseburger" data-price="1850.00">+</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col burger-item">
+                        <div class="card border-0 shadow-sm h-100">
+                            <img src="assets/images/chickenburger.png" class="card-img-top bg-warning rounded-top">
+                            <div class="card-body">
+                                <h6 class="card-title fw-bold text-dark">Chicken Burger</h6>
+                                <p class="card-text text-body-secondary small mb-3">grilled chicken patty with lettuce, tomato, cheese and mayo</p>
+                                <div class="d-flex justify-content-between align-items-center card-detail">
+                                    <span class="fw-bold">Rs.1950.00</span>
+                                    <button class="btn btn-sm btn-add-cart rounded-circle" data-name="Chicken Burger" data-price="1950.00">+</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col burger-item">
+                        <div class="card border-0 shadow-sm h-100">
+                            <img src="assets/images/smashburger.png" class="card-img-top bg-warning rounded-top">
+                            <div class="card-body">
+                                <h6 class="card-title fw-bold text-dark">Smash Burger</h6>
+                                <p class="card-text text-body-secondary small mb-3">crispy, caramelized ground beef griddle with melted cheese, onions, and lettuce</p>
+                                <div class="d-flex justify-content-between align-items-center card-detail">
+                                    <span class="fw-bold" >Rs.2250.00</span>
+                                    <button class="btn btn-sm btn-add-cart rounded-circle" data-name="Smash Burger" data-price="2250.00" >+</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col burger-item">
+                        <div class="card border-0 shadow-sm h-100">
+                            <img src="assets/images/turkeyburger.png" class="card-img-top bg-warning rounded-top">
+                            <div class="card-body">
+                                <h6 class="card-title fw-bold text-dark">Turkey Burger</h6>
+                                <p class="card-text text-body-secondary small mb-3">seasoned and grilled ground turkey patty with lettuce, tomato and avocado</p>
+                                <div class="d-flex justify-content-between align-items-center card-detail">
+                                    <span class="fw-bold">Rs.1650.00</span>
+                                    <button class="btn btn-sm btn-add-cart rounded-circle" data-name="Turkey Burger" data-price="1650.00">+</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col burger-item">
+                        <div class="card border-0 shadow-sm h-100">
+                            <img src="assets/images/meatburger.png" class="card-img-top bg-warning rounded-top">
+                            <div class="card-body">
+                                <h6 class="card-title fw-bold text-dark">Meat Burger</h6>
+                                <p class="card-text text-body-secondary small mb-3">grilled all-meat patty with bacon, cheddar, tomato, lettuce and barbecue sauce</p>
+                                <div class="d-flex justify-content-between align-items-center card-detail">
+                                    <span class="fw-bold">Rs.2450.00</span>
+                                    <button class="btn btn-sm btn-add-cart rounded-circle" data-name="Meat Burger" data-price="2450.00" >+</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col burger-item">
+                        <div class="card border-0 shadow-sm h-100">
+                            <img src="assets/images/mushroomburger.png" class="card-img-top bg-warning rounded-top">
+                            <div class="card-body">
+                                <h6 class="card-title fw-bold text-dark">Mushroom Burger</h6>
+                                <p class="card-text text-body-secondary small mb-3">portobello mushroom with melted cheese, garlic aioli, and sautéed onions</p>
+                                <div class="d-flex justify-content-between align-items-center card-detail">
+                                    <span class="fw-bold" >Rs.1550.00</span>
+                                    <button class="btn btn-sm btn-add-cart rounded-circle" data-name="Mushroom Burger" data-price="1550.00" >+</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SIDES SECTION -->
+                    <div class="col side-item" id="sides">
+                        <div class="card border-0 shadow-sm h-100">
+                            <img src="assets/images/chickennuggets.jpg" class="card-img-top rounded-top" >
+                            <div class="card-body">
+                                <h6 class="card-title fw-bold text-dark">Chicken Nuggets (4 pieces)</h6>
+                                <p class="card-text text-body-secondary small mb-3"></p>
+                                <div class="d-flex justify-content-between align-items-center card-detail">
+                                    <span class="fw-bold" >Rs.1300.00</span>
+                                    <button class="btn btn-sm btn-add-cart rounded-circle" data-name="Chicken Nuggets (4 pieces)" data-price="1300.00">+</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col side-item">
+                        <div class="card border-0 shadow-sm h-100">
+                            <img src="assets/images/frenchfries.png" class="card-img-top rounded-top" >
+                            <div class="card-body">
+                                <h6 class="card-title fw-bold text-dark">French Fries</h6>
+                                <p class="card-text text-body-secondary small mb-3"></p>
+                                <div class="d-flex justify-content-between align-items-center card-detail">
+                                    <span class="fw-bold" >Rs.950.00</span>
+                                    <button class="btn btn-sm btn-add-cart rounded-circle" data-name="French Fries" data-price="950.00" >+</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col side-item">
+                        <div class="card border-0 shadow-sm h-100">
+                            <img src="assets/images/loadedfries.jpg" class="card-img-top rounded-top">
+                            <div class="card-body">
+                                <h6 class="card-title fw-bold text-dark">Chilli Cheese Loaded Fries</h6>
+                                <p class="card-text text-body-secondary small mb-3"></p>
+                                <div class="d-flex justify-content-between align-items-center card-detail">
+                                    <span class="fw-bold" >Rs.1450.00</span>
+                                    <button class="btn btn-sm btn-add-cart rounded-circle" data-name="Chilli Cheese Loaded Fries" data-price="1450.00" >+</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col side-item">
+                        <div class="card border-0 shadow-sm h-100">
+                            <img src="assets/images/onionrings.jpg" class="card-img-top rounded-top" >
+                            <div class="card-body">
+                                <h6 class="card-title fw-bold text-dark">Crispy Onion Rings</h6>
+                                <p class="card-text text-body-secondary small mb-3"></p>
+                                <div class="d-flex justify-content-between align-items-center card-detail">
+                                    <span class="fw-bold" >Rs.850.00</span>
+                                    <button class="btn btn-sm btn-add-cart rounded-circle" data-name="Crispy Onion Rings" data-price="850.00" >+</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- DRINKS SECTION -->
+                    <div class="col drink-item" id="drinks">
+                        <div class="card border-0 shadow-sm h-100">
+                            <img src="assets/images/coke3.jpg" class="card-img-top rounded-top">
+                            <div class="card-body">
+                                <h6 class="card-title fw-bold text-dark">Coke (500 ml)</h6>
+                                <p class="card-text text-body-secondary small mb-3"></p>
+                                <div class="d-flex justify-content-between align-items-center card-detail">
+                                    <span class="fw-bold" >Rs.400.00</span>
+                                    <button class="btn btn-sm btn-add-cart rounded-circle" data-name="Coke (500 ml)" data-price="400.00">+</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col drink-item">
+                        <div class="card border-0 shadow-sm h-100">
+                            <img src="assets/images/pepsi.jpg" class="card-img-top rounded-top" >
+                            <div class="card-body">
+                                <h6 class="card-title fw-bold text-dark">Pepsi (500 ml)</h6>
+                                <p class="card-text text-body-secondary small mb-3"></p>
+                                <div class="d-flex justify-content-between align-items-center card-detail">
+                                    <span class="fw-bold" >Rs.400.00</span>
+                                    <button class="btn btn-sm btn-add-cart rounded-circle" data-name="Pepsi (500 ml)" data-price="400.00">+</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col drink-item">
+                        <div class="card border-0 shadow-sm h-100">
+                            <img src="assets/images/sprite1.jpg" class="card-img-top rounded-top" >
+                            <div class="card-body">
+                                <h6 class="card-title fw-bold text-dark">Sprite (500 ml)</h6>
+                                <p class="card-text text-body-secondary small mb-3"></p>
+                                <div class="d-flex justify-content-between align-items-center card-detail">
+                                    <span class="fw-bold" >Rs.400.00</span>
+                                    <button class="btn btn-sm btn-add-cart rounded-circle" data-name="Sprite (500 ml)" data-price="400.00" >+</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col drink-item">
+                        <div class="card border-0 shadow-sm h-100">
+                            <img src="assets/images/lemonmojito.jpg" class="card-img-top rounded-top" >
+                            <div class="card-body">
+                                <h6 class="card-title fw-bold text-dark">Lemon Mojito</h6>
+                                <p class="card-text text-body-secondary small mb-3"></p>
+                                <div class="d-flex justify-content-between align-items-center card-detail">
+                                    <span class="fw-bold" >Rs.850.00</span>
+                                    <button class="btn btn-sm btn-add-cart rounded-circle" data-name="Lemon Mojito" data-price="850.00">+</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col drink-item">
+                        <div class="card border-0 shadow-sm h-100">
+                            <img src="assets/images/strwberrymojito.avif" class="card-img-top rounded-top">
+                            <div class="card-body">
+                                <h6 class="card-title fw-bold text-dark">Strawberry Mojito</h6>
+                                <p class="card-text text-body-secondary small mb-3"></p> 
+                                <div class="d-flex justify-content-between align-items-center card-detail">
+                                    <span class="fw-bold">Rs.950.00</span>
+                                    <button class="btn btn-sm btn-add-cart rounded-circle" data-name="Strawberry Mojito" data-price="950.00">+</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col drink-item">
+                        <div class="card border-0 shadow-sm h-100">
+                            <img src="assets/images/orangemojito.avif" class="card-img-top rounded-top">
+                            <div class="card-body">
+                                <h6 class="card-title fw-bold text-dark">Orange Mojito</h6>
+                                <p class="card-text text-body-secondary small mb-3"></p>
+                                <div class="d-flex justify-content-between align-items-center card-detail">
+                                    <span class="fw-bold">Rs.950.00</span>
+                                    <button class="btn btn-sm btn-add-cart rounded-circle" data-name="Orange Mojito" data-price="950.00" >+</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Right: Current Order Sidebar (4 cols) -->
+            <div class="col-lg-4">
+                <div class="card border-0 shadow-sm position-sticky cart" >
+                    <div class="card-header border-0 bg-white">
+                        <h5 class="card-title mb-0">
+                            <span class="me-2">🛒</span> Current Order
+                        </h5>
+                    </div>
+                    <div class="card-body text-center py-5" id="cart-empty">
+                        <div style="color: #ccc; font-size: 3rem; margin-bottom: 1rem;">🛒</div>
+                        <p class="text-body-secondary fw-5">Cart is empty</p>
+                        <small class="text-body-secondary d-block">Add items to start an order</small>
+                    </div>
+                    <ul class="list-group list-group-flush" id="cart-items" style="display: none;"></ul>
+                    <div class="card-footer border-top bg-white">
+                        <button class="btn w-100 rounded-3 checkout-btn">Checkout</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
-
-    <main>
-        <section class="py-2 text-center container">
-            <div class="row py-lg-5">
-                <div class="col-lg-6 col-md-8 mx-auto">
-                    <h1 class="fw-bold py-3 h-menu">Our Menu</h1>
-                    <p> <a href="#burgers" class="btn btn-menu">Burgers</a> 
-                         <a href="#fries" class="btn btn-menu">Snacks & Bites</a> 
-                         <a href="#drinks" class="btn btn-menu">Beverages</a> 
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <h1 class="h-food" id="burgers">Burgers</h1>
-        <div class="album py-5 " >
-            <div class="container">
-                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-                    <div class="col">
-                        <div class="card shadow-sm"> 
-                            <img aria-label="Placeholder: Thumbnail"
-                                class="bd-placeholder-img card-img-top" height="225"
-                                preserveAspectRatio="xMidYMid slice" role="img" width="100%"
-                                src="assets/images/cheeseburger.png">
-                            <div class="card-body">  
-                                <p class="card-text"><h5>Cheeseburger</h5>juicy ground beef patty topped with 4 different melted cheese</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group"> 
-                                        <button type="button" class="btn btn-sm btn-secondary" disabled aria-disabled="true" tabindex="-1">Rs.1850.00</button><button type="button"
-                                            class="btn btn-sm btn-outline-secondary">+add to cart</button> 
-                                    </div> 
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card shadow-sm"> 
-                            <img aria-label="Placeholder: Thumbnail"
-                                class="bd-placeholder-img card-img-top" height="225"
-                                preserveAspectRatio="xMidYMid slice" role="img" width="100%"
-                                src="assets/images/chickenburger.png">
-                            <div class="card-body">
-                                <p class="card-text"><h5>Chicken Burger</h5>grilled chicken patty with lettuce, tomato, cheese and mayo</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group"> 
-                                        <button type="button" class="btn btn-sm btn-secondary" disabled aria-disabled="true" tabindex="-1">Rs.1950.00</button><button type="button"
-                                            class="btn btn-sm btn-outline-secondary">+add to cart</button>
-                                    </div> 
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card shadow-sm"> 
-                            <img aria-label="Placeholder: Thumbnail"
-                                class="bd-placeholder-img card-img-top" height="225"
-                                preserveAspectRatio="xMidYMid slice" role="img" width="100%"
-                                src="assets/images/smashburger.png">   
-                            <div class="card-body">
-                                <p class="card-text"><h5>Smash Burger</h5>crispy, caramelized ground beef griddle with melted cheese, onions, and lettuce</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group"> 
-                                        <button type="button" class="btn btn-sm btn-secondary" disabled aria-disabled="true" tabindex="-1">Rs.2250.00</button><button type="button"
-                                            class="btn btn-sm btn-outline-secondary">+add to cart</button> 
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card shadow-sm"> 
-                            <img aria-label="Placeholder: Thumbnail"
-                                class="bd-placeholder-img card-img-top" height="225"
-                                preserveAspectRatio="xMidYMid slice" role="img" width="100%"
-                                src="assets/images/turkeyburger.png">
-                            <div class="card-body">
-                                <p class="card-text"><h5>Turkey Burger</h5>seasoned and grilled ground turkey patty with lettuce, tomato and avacado</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group"> 
-                                        <button type="button" class="btn btn-sm btn-secondary" disabled aria-disabled="true" tabindex="-1">Rs.1650.00</button>
-                                        <button type="button"class="btn btn-sm btn-outline-secondary">+add to cart</button> 
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card shadow-sm"> 
-                            <img aria-label="Placeholder: Thumbnail"
-                                class="bd-placeholder-img card-img-top" height="225"
-                                preserveAspectRatio="xMidYMid slice" role="img" width="100%"
-                                src="assets/images/meatburger.png">
-                            <div class="card-body">
-                                <p class="card-text"><h5>Meat Burger</h5>grilled all-meat(beef, chicken, lamb, pork) patty with bacon, cheddar, tomato, lettuce and barbecue sauce </p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group"> 
-                                        <button type="button" class="btn btn-sm btn-secondary" disabled aria-disabled="true" tabindex="-1">Rs.2450.00</button>
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">+add to cart</button> 
-                                    </div> 
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card shadow-sm"> 
-                            <img aria-label="Placeholder: Thumbnail"
-                                class="bd-placeholder-img card-img-top" height="225"
-                                preserveAspectRatio="xMidYMid slice" role="img" width="100%"
-                                src="assets/images/mushroomburger.png">
-                            <div class="card-body">
-                                <p class="card-text"><h5>Mushroom Burger</h5>portobello mushroom with melted cheese, garlic aioli, and sautéed onions</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group"> 
-                                        <button type="button" class="btn btn-sm btn-secondary" disabled aria-disabled="true" tabindex="-1">Rs.1550.00</button>
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">+add to cart</button> 
-                                    </div> 
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-
-        <h2 class="h-food" id="fries">Snacks & Bites</h2>
-        <div class="album py-5 " >
-            <div class="container">
-                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-                    <div class="col">
-                        <div class="card shadow-sm"> 
-                            <img aria-label="Placeholder: Thumbnail"
-                                class="bd-placeholder-img card-img-top" height="225"
-                                preserveAspectRatio="xMidYMid slice" role="img" width="100%"
-                                src="assets/images/chickennuggets.jpg">
-                            <div class="card-body">  
-                                <p class="card-text"><h5>Chicken Nuggets (4 pieces)</h5></p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group"> 
-                                        <button type="button" class="btn btn-sm btn-secondary" disabled aria-disabled="true" tabindex="-1">Rs.1300.00</button><button type="button"
-                                            class="btn btn-sm btn-outline-secondary">+add to cart</button> 
-                                    </div> 
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card shadow-sm"> 
-                            <img aria-label="Placeholder: Thumbnail"
-                                class="bd-placeholder-img card-img-top" height="225"
-                                preserveAspectRatio="xMidYMid slice" role="img" width="100%"
-                                src="assets/images/frenchfries.png">
-                            <div class="card-body">
-                                <p class="card-text"><h5>French Fries</h5></p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group"> 
-                                        <button type="button" class="btn btn-sm btn-secondary" disabled aria-disabled="true" tabindex="-1">Rs.950.00</button><button type="button"
-                                            class="btn btn-sm btn-outline-secondary">+add to cart</button>
-                                    </div> 
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card shadow-sm"> 
-                            <img aria-label="Placeholder: Thumbnail"
-                                class="bd-placeholder-img card-img-top" height="225"
-                                preserveAspectRatio="xMidYMid slice" role="img" width="100%"
-                                src="assets/images/loadedfries.jpg">   
-                            <div class="card-body">
-                                <p class="card-text"><h5>Chilli Cheese Loaded Fries</h5></p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group"> 
-                                        <button type="button" class="btn btn-sm btn-secondary" disabled aria-disabled="true" tabindex="-1">Rs.1450.00</button><button type="button"
-                                            class="btn btn-sm btn-outline-secondary">+add to cart</button> 
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card shadow-sm"> 
-                            <img aria-label="Placeholder: Thumbnail"
-                                class="bd-placeholder-img card-img-top" height="225"
-                                preserveAspectRatio="xMidYMid slice" role="img" width="100%"
-                                src="assets/images/onionrings.jpg">
-                            <div class="card-body">
-                                <p class="card-text"><h5>Crispy Onion Rings</h5></p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group"> 
-                                        <button type="button" class="btn btn-sm btn-secondary" disabled aria-disabled="true" tabindex="-1">Rs.850.00</button>
-                                        <button type="button"class="btn btn-sm btn-outline-secondary">+add to cart</button> 
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
-            </div>
-        </div>
-
-
-        <h2 class="h-food" id="drinks">Beverages</h2>
-        <div class="album py-5 " >
-            <div class="container">
-                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-                    <div class="col">
-                        <div class="card shadow-sm"> 
-                            <img aria-label="Placeholder: Thumbnail"
-                                class="bd-placeholder-img card-img-top" height="225"
-                                preserveAspectRatio="xMidYMid slice" role="img" width="100%"
-                                src="assets/images/coke3.jpg">
-                            <div class="card-body">  
-                                <p class="card-text"><h5>Coke (500 ml)</h5></p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group"> 
-                                        <button type="button" class="btn btn-sm btn-secondary" disabled aria-disabled="true" tabindex="-1">Rs.400.00</button><button type="button"
-                                            class="btn btn-sm btn-outline-secondary">+add to cart</button> 
-                                    </div> 
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card shadow-sm"> 
-                            <img aria-label="Placeholder: Thumbnail"
-                                class="bd-placeholder-img card-img-top" height="225"
-                                preserveAspectRatio="xMidYMid slice" role="img" width="100%"
-                                src="assets/images/pepsi.jpg">
-                            <div class="card-body">
-                                <p class="card-text"><h5>Pepsi (500 ml)</h5></p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group"> 
-                                        <button type="button" class="btn btn-sm btn-secondary" disabled aria-disabled="true" tabindex="-1">Rs.400.00</button><button type="button"
-                                            class="btn btn-sm btn-outline-secondary">+add to cart</button>
-                                    </div> 
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card shadow-sm"> 
-                            <img aria-label="Placeholder: Thumbnail"
-                                class="bd-placeholder-img card-img-top" height="225"
-                                preserveAspectRatio="xMidYMid slice" role="img" width="100%"
-                                src="assets/images/sprite1.jpg">   
-                            <div class="card-body">
-                                <p class="card-text"><h5>Sprite (500 ml)</h5></p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group"> 
-                                        <button type="button" class="btn btn-sm btn-secondary" disabled aria-disabled="true" tabindex="-1">Rs.400.00</button><button type="button"
-                                            class="btn btn-sm btn-outline-secondary">+add to cart</button> 
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card shadow-sm"> 
-                            <img aria-label="Placeholder: Thumbnail"
-                                class="bd-placeholder-img card-img-top" height="225"
-                                preserveAspectRatio="xMidYMid slice" role="img" width="100%"
-                                src="assets/images/lemonmojito.jpg">
-                            <div class="card-body">
-                                <p class="card-text"><h5>Lemon Mojito</h5></p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group"> 
-                                        <button type="button" class="btn btn-sm btn-secondary" disabled aria-disabled="true" tabindex="-1">Rs.850.00</button>
-                                        <button type="button"class="btn btn-sm btn-outline-secondary">+add to cart</button> 
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                     <div class="col">
-                        <div class="card shadow-sm"> 
-                            <img aria-label="Placeholder: Thumbnail"
-                                class="bd-placeholder-img card-img-top" height="225"
-                                preserveAspectRatio="xMidYMid slice" role="img" width="100%"
-                                src="assets/images/strwberrymojito.avif">
-                            <div class="card-body">
-                                <p class="card-text"><h5>Strawberry Mojito</h5></p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group"> 
-                                        <button type="button" class="btn btn-sm btn-secondary" disabled aria-disabled="true" tabindex="-1">Rs.950.00</button>
-                                        <button type="button"class="btn btn-sm btn-outline-secondary">+add to cart</button> 
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                     <div class="col">
-                        <div class="card shadow-sm"> 
-                            <img aria-label="Placeholder: Thumbnail"
-                                class="bd-placeholder-img card-img-top" height="225"
-                                preserveAspectRatio="xMidYMid slice" role="img" width="100%"
-                                src="assets/images/orangemojito.avif">
-                            <div class="card-body">
-                                <p class="card-text"><h5>Orange Mojito</h5></p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group"> 
-                                        <button type="button" class="btn btn-sm btn-secondary" disabled aria-disabled="true" tabindex="-1">Rs.950.00</button>
-                                        <button type="button"class="btn btn-sm btn-outline-secondary">+add to cart</button> 
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main>
-
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>
