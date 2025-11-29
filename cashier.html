@@ -12,7 +12,6 @@
 
 <body>
 
-    <!-- Header -->
     <nav class="navbar bg-white border-bottom">
         <div class="container-fluid px-4">
             <div class="d-flex align-items-center gap-2">
@@ -24,10 +23,8 @@
     </nav>
 
     <div class="container-fluid p-4">
-        <div class="row g-4">
-            <!-- Left: Menu Items (8 cols) -->
+        <div class="row g-4">          
             <div class="col-lg-8">
-                <!-- Category Filter -->
                 <div class="d-flex gap-2 mb-4 flex-wrap">
                     <button class="btn btn-filter btn-sm rounded-pill px-5 active" data-filter="all">All</button>
                     <a href="#burgers"><button class="btn btn-filter btn-sm rounded-pill px-5"
@@ -38,10 +35,7 @@
                             data-filter="drink">Drink</button></a>
                 </div>
 
-                <!-- Menu Grid -->
                 <div class="row row-cols-1 row-cols-sm-2 g-3">
-
-                    <!-- BURGERS SECTION -->
                     <div class="col burger-item" id="burgers">
                         <div class="card border-0 shadow-sm h-100">
                             <img src="assets/images/cheeseburger.png" class="card-img-top bg-warning rounded-top">
@@ -138,7 +132,6 @@
                         </div>
                     </div>
 
-                    <!-- SIDES SECTION -->
                     <div class="col side-item" id="sides">
                         <div class="card border-0 shadow-sm h-100">
                             <img src="assets/images/chickennuggets.jpg" class="card-img-top rounded-top">
@@ -199,7 +192,6 @@
                         </div>
                     </div>
 
-                    <!-- DRINKS SECTION -->
                     <div class="col drink-item" id="drinks">
                         <div class="card border-0 shadow-sm h-100">
                             <img src="assets/images/coke3.jpg" class="card-img-top rounded-top">
@@ -293,7 +285,6 @@
                 </div>
             </div>
 
-            <!-- Right: Current Order Sidebar (4 cols) -->
             <div class="col-lg-4">
                 <div class="card border-0 shadow-sm position-sticky cart">
                     <div class="card-header border-0 bg-white">
@@ -315,8 +306,6 @@
         </div>
     </div>
 
-    <!-- Payment Modal -->
-
     <div class="modal fade" id="paymentModal" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content rounded-3">
@@ -326,13 +315,11 @@
                 </div>
 
                 <div class="modal-body p-4">
-                    <!-- Order Total -->
                     <div class="order-total-box mb-4">
                         <label class="form-label text-body-secondary">Order Total</label>
                         <h3 class="mb-0 fw-bold" id="modal-total">Rs.0.00</h3>
                     </div>
 
-                    <!-- Payment Method -->
                     <div class="mb-4">
                         <label class="form-label fw-bold">Payment Method</label>
                         <div class="row g-2">
@@ -351,21 +338,18 @@
                         </div>
                     </div>
 
-                    <!-- Customer Name -->
                     <div class="mb-3">
                         <label for="customer-name" class="form-label fw-bold">Customer Name</label>
                         <input type="text" class="form-control modal-input" id="customer-name"
                             placeholder="Enter customer name">
                     </div>
 
-                    <!-- Customer Phone -->
                     <div class="mb-4">
                         <label for="customer-phone" class="form-label fw-bold">Customer Phone</label>
                         <input type="tel" class="form-control modal-input" id="customer-phone"
                             placeholder="Enter phone number">
                     </div>
 
-                    <!-- Action Buttons -->
                     <div class="row g-2">
                         <div class="col-6">
                             <button type="button" class="btn btn-outline-secondary w-100"

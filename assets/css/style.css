@@ -13,13 +13,11 @@ body {
     height: 20%;
 }
 
-/* brand title */
 .brand-title {
     color: #f67318;
     font-size: 1.75rem;
 }
 
-/* primary login CTA */
 .btn-login {
     background: linear-gradient(180deg, #f67318 0%, #e55d12 100%);
     border: none;
@@ -28,7 +26,6 @@ body {
     box-shadow: 0 12px 26px rgba(230, 90, 20, 0.16);
 }
 
-/* active role button style */
 .btn-outline-secondary.active,
 .btn-outline-secondary:active,
 .btn-check:checked+.btn-outline-secondary {
@@ -38,9 +35,6 @@ body {
     box-shadow: 0 8px 18px rgba(246, 115, 24, 0.14);
 }
 
-/* ...existing code... */
-
-/* Filter buttons */
 .btn-filter {
     background-color: #f3f3f3;
     color: #333;
@@ -58,7 +52,6 @@ body {
     color: white;
 }
 
-/* Card hover effect */
 .card {
     border-radius: 12px;
     transition: transform 0.2s, box-shadow 0.2s;
@@ -93,9 +86,7 @@ body {
     font-weight: 600;
 }
 
-/* ...existing code... */
 
-/* Payment Modal Styling */
 .bg-modal-header {
     background: linear-gradient(90deg, #f67318 0%, #e85d12 100%);
 }
@@ -153,53 +144,19 @@ body {
     color: white;
 }
 
-/* ...existing code... */
-
-/* ...existing code... */
-
-/* ===== ADMIN DASHBOARD STYLES ===== */
-
-:root {
-  --brand: #f67318;
-  --brand-dark: #e85d12;
-  --bg-light: #fff6ef;
-  --bg-lighter: #fffaf5;
-  --text-dark: #213042;
-  --text-muted: #6c7785;
-  --border-light: #e6e9ee;
-  --success-bg: #eaf9ed;
-  --success-text: #1f8a4a;
-  --table-head-bg: #f7f9fb;
-}
-
-
-
-/* Header */
-
-
-
-
 .text-orange {
-  color: var(--brand);
+  color: #f67318;
   font-weight: 700;
   letter-spacing: 0.3px;
 }
 
-
-
-/* Main Container & Card */
 main.container {
   max-width: 1280px;
 }
 
-
-
-/* Nav Tabs */
-
-
 .nav-tabs .nav-link {
   border: none;
-  color: var(--text-dark);
+  color:  #213042;
   background: transparent;
   padding: 12px 24px;
   font-weight: 600;
@@ -210,19 +167,18 @@ main.container {
 
 .nav-tabs .nav-link:hover {
   background: rgba(0, 0, 0, 0.02);
-  color: var(--brand);
+  color:#f67318;
 }
 
 .nav-tabs .nav-link.active {
-  color: var(--brand);
+  color: #f67318;
   background: transparent;
-  border-bottom: 3px solid var(--brand);
+  border-bottom: 3px solid #f67318;
   border-radius: 0;
 }
 
-/* Buttons */
 .btn-orange {
-  background: var(--brand);
+  background: #f67318;
   color: #fff;
   border: none;
   padding: 10px 18px;
@@ -233,7 +189,7 @@ main.container {
 }
 
 .btn-orange:hover {
-  background: var(--brand-dark);
+  background: #e85d12;
   transform: translateY(-2px);
   box-shadow: 0 6px 16px rgba(246, 115, 24, 0.2);
 }
@@ -242,11 +198,10 @@ main.container {
   transform: translateY(0);
 }
 
-/* Form Controls */
 .form-control,
 .form-select {
   border-radius: 8px;
-  border: 1.5px solid var(--border-light);
+  border: 1.5px solid #e6e9ee;
   padding: 10px 14px;
   font-size: 0.95rem;
   transition: all 0.15s ease;
@@ -254,7 +209,7 @@ main.container {
 
 .form-control:focus,
 .form-select:focus {
-  border-color: var(--brand);
+  border-color: #f67318;
   box-shadow: 0 0 0 0.2rem rgba(246, 115, 24, 0.15);
 }
 
@@ -264,13 +219,10 @@ main.container {
   font-size: 0.9rem;
 }
 
-/* Table Styling */
-
-
 .table thead th {
-  background: var(--table-head-bg);
-  border-bottom: 2px solid var(--border-light);
-  color: var(--text-muted);
+  background: #f7f9fb;
+  border-bottom: 2px solid #e6e9ee;
+  color: #6c7785;
   font-weight: 600;
   padding: 14px 12px;
   font-size: 0.95rem;
@@ -278,7 +230,7 @@ main.container {
 
 .table tbody tr {
   background: #fff;
-  border-bottom: 1px solid var(--border-light);
+  border-bottom: 1px solid #e6e9ee;
   transition: all 0.1s ease;
 }
 
@@ -289,31 +241,28 @@ main.container {
 .table td {
   padding: 14px 12px;
   vertical-align: middle;
-  color: var(--text-dark);
+  color:  #213042;
 }
 
 .table td strong {
   font-weight: 600;
 }
 
-/* Price Text */
 .text-orange {
-  color: var(--brand);
+  color:#f67318;
   font-weight: 700;
 }
 
-/* Badge Status */
 .badge-status {
   display: inline-block;
   padding: 6px 12px;
   border-radius: 999px;
-  background: var(--success-bg);
-  color: var(--success-text);
+  background:  #eaf9ed;
+  color:  #1f8a4a;
   font-weight: 600;
   font-size: 0.85rem;
 }
 
-/* Action Buttons */
 .table .btn-outline-secondary,
 .table .btn-outline-danger {
   border-radius: 6px;
@@ -342,7 +291,6 @@ main.container {
   color: #fff;
 }
 
-/* Modal Styling */
 .modal-content {
   border-radius: 12px;
   border: none;
@@ -350,14 +298,14 @@ main.container {
 }
 
 .modal-header {
-  border-bottom: 1px solid var(--border-light);
+  border-bottom: 1px solid #e6e9ee;
   padding: 20px;
   background: #fff;
 }
 
 .modal-title {
   font-weight: 700;
-  color: var(--brand);
+  color: #f67318;
 }
 
 .modal-body {
@@ -365,17 +313,16 @@ main.container {
 }
 
 .modal-footer {
-  border-top: 1px solid var(--border-light);
+  border-top: 1px solid #e6e9ee;
   padding: 16px 20px;
   background: #fafbfc;
 }
 
-/* Flex Utilities */
 .d-flex {
   gap: 12px;
 }
 
-/* Responsive */
+
 @media (max-width: 768px) {
   header .container-fluid {
     padding-left: 12px;
@@ -399,5 +346,3 @@ main.container {
     padding: 10px 8px;
   }
 }
-
-/* ...existing code... */
