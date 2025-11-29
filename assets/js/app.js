@@ -1,15 +1,29 @@
-// ...existing code...
-/*
-  Cart behaviour for menu.html
-  - Add items with .btn-add-cart (data-name, data-price)
-  - Renders #cart-items (UL) and toggles #cart-empty
-  - Quantity +/- and remove actions update localStorage and UI
-*/
+// ================= LOGIN ===================== //
+
+document.addEventListener("DOMContentLoaded", function() {
+    const loginForm = document.getElementById("loginForm");
+    if (!loginForm) return;   // <-- Prevent login code from running on other pages
+
+    loginForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const role = document.getElementById("role-cashier").checked ? "cashier" : "admin";
+
+        if (role === "cashier") {
+            location.href = "cashier.html";
+        } else {
+            location.href = "admin.html";
+        }
+    });
+});
+
 
 const CART_KEY = 'gm_cart_v1';
 const ORDERS_KEY = 'gm_orders_v1';
+
 let cart = JSON.parse(localStorage.getItem(CART_KEY)) || [];
 let orders = JSON.parse(localStorage.getItem(ORDERS_KEY)) || [];
+
 
 // Helpers
 const saveCart = () => localStorage.setItem(CART_KEY, JSON.stringify(cart));
@@ -204,6 +218,111 @@ window.OrderStore = {
     getOrderById,
 };
 
+
+// CUSTOMER STORAGE & OPERATIONS
+const CUSTOMERKEY = 'gmcustomersv1';
+let customers = JSON.parse(localStorage.getItem(CUSTOMERKEY)) || [];
+console.log("Customers loaded:");
+
+// Save customers to localStorage
+function saveCustomers() {
+    localStorage.setItem(CUSTOMERKEY, JSON.stringify(customers));
+    console.log("Customers saved:");
+}
+
+// Add/Update customer from completed order
+function addCustomerFromOrder(order) {
+    const customerIndex = customers.findIndex(c => c.phoneNo === order.customerPhone);
+    
+    if (customerIndex !== -1) {
+        // Update existing customer
+        customers[customerIndex].orders.push(order.orderNumber);
+        customers[customerIndex].totalSpent = (parseFloat(customers[customerIndex].totalSpent) + parseFloat(order.total)).toFixed(2);
+        customers[customerIndex].lastOrder = order.orderNumber;
+    } else {
+        // Create new customer
+        const newCustomer = {
+            name: order.customerName,
+            phoneNo: order.customerPhone,
+            orders: [order.orderNumber],
+            totalSpent: order.total,
+            lastOrder: order.orderNumber,
+            createdAt: new Date().toISOString()
+        };
+        customers.push(newCustomer);
+    }
+    saveCustomers();
+}
+
+// Get all customers
+function getAllCustomers() {
+    return customers.slice();
+}
+
+// Get customer by phone
+function getCustomerByPhone(phoneNo) {
+    return customers.find(c => c.phoneNo === phoneNo) || null;
+}
+
+// Get customer's orders list
+function getCustomerOrders(phoneNo) {
+    const customer = getCustomerByPhone(phoneNo);
+    if (!customer || !customer.orders) return [];
+    return orders.filter(order => customer.orders.includes(order.orderNumber));
+}
+
+// Get total spent by customer
+function getCustomerTotalSpent(phoneNo) {
+    const customerOrders = getCustomerOrders(phoneNo);
+    return customerOrders.reduce((sum, order) => sum + parseFloat(order.total), 0).toFixed(2);
+}
+
+window.CustomerStore = {
+    addCustomerFromOrder,
+    getAllCustomers,
+    getCustomerByPhone,
+    getCustomerOrders,
+    getCustomerTotalSpent
+};
+
+// Render customers table from CustomerStore (using template)
+
+
+function renderCustomersTable(filter = '') {
+  const tbody = document.getElementById('customersTableBody');
+  if (!tbody) return;
+  
+  tbody.innerHTML = '';
+  
+  const cust = window.CustomerStore ? window.CustomerStore.getAllCustomers() : customers;
+  const filtered = cust.filter(cust => 
+    (cust.name.toLowerCase().includes(filter.toLowerCase()) ||
+    cust.orders.some(o => o.toLowerCase().includes(filter.toLowerCase())) || 
+     cust.phoneNo.toLowerCase().includes(filter.toLowerCase()))
+  );
+  
+  const template = document.getElementById('customerRowTemplate');
+  
+  filtered.forEach(cust => {
+    const clone = template.content.cloneNode(true);
+    clone.querySelector('.name').textContent = cust.name;
+    clone.querySelector('.phoneNo').textContent = cust.phoneNo;
+    clone.querySelector('.orders').textContent = cust.orders.join(', ');
+    clone.querySelector('.totalSpent').textContent = `Rs.${Number(cust.totalSpent).toFixed(2)}`;
+    
+    
+    tbody.appendChild(clone);
+    console.log("js loaded!");
+  });
+}
+
+
+
+
+
+
+
+
 // Single payment confirmation handler (no duplicates)
 let paymentProcessing = false;
 
@@ -253,8 +372,21 @@ function handlePaymentConfirmation(e) {
             status: 'paid'
         };
 
+        //-----------------------------------------------------------------------------------------------------------------------//
+        
+
+
         // Create and save order to orders array
         const savedOrder = createOrder(orderPayload);
+
+        //Save customer from order (NEW WORKING VERSION)
+        addCustomerFromOrder(savedOrder);
+
+        // Refresh customer table if on admin page
+        if (document.getElementById('customersTableBody')) {
+            renderCustomersTable();
+        }
+
 
         // Clear cart
         cart = [];
@@ -289,7 +421,7 @@ function handlePaymentConfirmation(e) {
 
 
 
-// ...existing code...
+// ...existing code...------------------------------------------------------------------------------------------------------------------
 
 // Menu store for CRUD operations (persisted to localStorage)
 const MENU_KEY = 'gm_menu_v1';
@@ -378,6 +510,9 @@ window.MenuStore = {
 };
 
 // ...existing code...
+// --- Customer CRUD Operations ---
+
+// --- Customer CRUD Operations ---
 
 
 // ...existing code...
@@ -491,3 +626,83 @@ document.addEventListener('click', (e) => {
 });
 
 // ...existing code...
+
+ 
+function salesOrderList(filter = '') {
+  const tbody = document.getElementById('salesTableBody');
+  if (!tbody) return;
+  
+  tbody.innerHTML = '';
+  
+  const items = window.OrderStoreStore ? window.OrderStore.getOrders() : orders;
+  const filtered = items.filter(order => 
+    (order.orderNumber.toLowerCase().includes(filter.toLowerCase()) || 
+    order.items.some(i => i.name.toLowerCase().includes(filter.toLowerCase())) ||
+    order.paymentMethod.toLowerCase().includes(filter.toLowerCase()) ||
+     order.createdAt.toLowerCase().includes(filter.toLowerCase())
+    )
+  );
+  const totalRevenueEl = document.getElementById('salesTotal');
+  const totalRevenue = filtered.reduce((sum, order) => sum + Number(order.total), 0);
+  
+  const template = document.getElementById('salesRowTemplate');
+  
+  filtered.forEach(order => {
+    const clone = template.content.cloneNode(true);
+    clone.querySelector('.order-id').textContent = order.orderNumber;
+    clone.querySelector('.items').textContent = order.items.map(i => `${i.name}`).join(', ');
+    clone.querySelector('.total').textContent = `Rs.${Number(order.total).toFixed(2)}`;
+    clone.querySelector('.payment-method').textContent = order.paymentMethod;
+    clone.querySelector('.order-status').textContent = order.status;
+    clone.querySelector('.date').textContent = order.createdAt ? new Date(order.createdAt).toLocaleDateString() : '';
+    
+    tbody.appendChild(clone);
+  });
+
+  if (totalRevenueEl) {
+    totalRevenueEl.textContent = `Rs.${totalRevenue.toFixed(2)}`;
+    }
+
+  
+}
+
+// Initialize on page load
+document.addEventListener('DOMContentLoaded', () => {
+  // Only run if on admin.html (check if elements exist)
+  if (!document.getElementById('salesTableBody')) return;
+  
+  salesOrderList();
+
+  // Search filter
+  const searchInput = document.getElementById('searchSales');
+  if (searchInput) {
+    searchInput.addEventListener('input', (e) => {
+      salesOrderList(e.target.value);
+    });
+  }
+});
+
+
+
+
+// ADMIN PAGE INITIALIZATION
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize customers table
+    if (document.getElementById('customersTableBody')) {
+        renderCustomersTable();
+        
+        // Search functionality
+        const searchInput = document.getElementById('searchCustomer');
+        if (searchInput) {
+            searchInput.addEventListener('input', function(e) {
+                renderCustomersTable(e.target.value);
+            });
+        }
+    }
+    
+    // Expose functions globally for admin access
+    
+});
+
+
+
